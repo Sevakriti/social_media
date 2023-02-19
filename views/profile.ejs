@@ -1,0 +1,46 @@
+
+<%- include('./common/base') %>
+
+
+<div class="container">
+    <h2 class="text-center p-4 m-4">Welcome to Social Media!</h2>
+    
+    <div class="row">
+        <div class="col-md-8 m-auto">
+            <div class="card m-auto" style="padding: 30px 15%;">
+                <div class="card-body">
+                    <form action="/signup" method="post">
+                        <h1 class="text-center display-5">User Profile</h1>
+                        <hr>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <p>Name : <span style="font-size: 25px;" class="text-secondary"> <%= data.name %></span></p>
+                            </div>
+                            <div class="col-12">
+                                <p>Email : <span style="font-size: 25px;" class="text-secondary"> <%= data.email %> </span></p>
+                            </div>
+        
+                            <div class="col-12 p-4">
+                                <hr class="w-75 m-auto">
+                                <div class="mt-3 text-center">
+                                    <a href="/logout" class="btn btn-danger"> Logout </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('./common/footer') %>
+
+
+
+
+
+
+

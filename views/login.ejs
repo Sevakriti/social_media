@@ -1,0 +1,39 @@
+
+<%- include('./common/base') %>
+
+
+<div class="container">
+    <h2 class="text-center p-4 m-4">Welcome to Social Media!</h2>
+    <div class="row">
+        <div class="col-md-8 m-auto">
+            <div class="card m-auto" style="padding: 30px 15%;">
+                <div class="card-body">
+                    <form action="/login" method="post">
+                        <h1 class="text-center display-5">Login Form</h1>
+                        <hr>
+                        <div class="mb-3">
+                            <label for="InputEmail" class="form-label">Email </label>
+                            <input type="email" class="form-control" id="InputEmail" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="InputPassword" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('./common/footer') %>
+
+
+
+
+
+
+

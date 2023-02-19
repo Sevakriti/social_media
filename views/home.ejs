@@ -1,0 +1,52 @@
+
+<%- include('./common/base') %>
+
+
+<div class="container">
+    <h2 class="text-center p-4 m-4">Welcome to Social Media!</h2>
+
+    <div class="row">
+        <div class="col-md-8 m-auto">
+            <% if(data.name) { %>
+
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/addPost" method="post">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Add Your Post here.</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary align-item-right">Add Post</button>
+                        </form>
+                    </div>
+                </div>        
+
+            <% } %>
+            
+
+            <% data.posts.forEach(post => { %>
+                <div class="card mt-2">
+                    <div class="card-body p-4">
+                        <p class="lead"> <%= post.content %> </p>
+                        <figcaption class="blockquote-footer text-danger">
+                            <%= post.email %> <cite title="Source Title">1 min ago</cite>
+                        </figcaption>
+                        
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    
+
+
+
+</div>
+<%- include('./common/footer') %>
+
+
+
+
+
+
+
